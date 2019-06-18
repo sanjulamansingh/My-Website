@@ -1,1125 +1,147 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Sanjula Mansingh</title>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      margin: 0;
+      opacity: 0;
+      height: 100%;
+      animation: fade-in-bg 6s 1s forwards;
+    }
+    .bg-fade-in {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
 
-    <!-- Document Settings -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      background-image: url(bg.jpg);
+      background-size: cover;
+      background-position: center center;
+    }
 
-    <!-- Base Meta -->
-    <!-- dynamically fixing the title for tag/author pages -->
+    .content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
 
+    .title {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      font-size: 2rem;
+      font-family: 'Pacifico', cursive;
+    }
 
+    .title p {
+      margin-block-end: .5em;
+      margin-block-start: .5em;
+      opacity: 0;
+    }
 
-    <title>Sanjula Mansingh</title>
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Styles'n'Scripts -->
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
-    <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <style>.hljs { background: none; }</style>
+    .title .p-fin-0 {
+      animation: fade-in-txt 1.8s 4s ease-out forwards;
+      margin-right: 3rem;
+    }
 
-    <!--[if IE]>
-        <style>
-            p, ol, ul{
-                width: 100%;
-            }
-            blockquote{
-                width: 100%;
-            }
-        </style>
-    <![endif]-->
-    
-    <!-- This tag outputs SEO meta+structured data and other important settings -->
-    <meta name="description" content="Life Coaching · Be Yourself" />
-    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="/" />
-    <meta name="referrer" content="no-referrer-when-downgrade" />
+    .title .p-fin-1 {
+      animation: fade-in-txt 1.3s 6s ease-out forwards;
+      margin-left: 3rem;
+      text-align: end;
+    }
 
-     <!--title below is coming from _includes/dynamic_title-->
-    <meta property="og:site_name" content="Sanjula Mansingh" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Sanjula Mansingh" />
-    <meta property="og:description" content="Life Coaching · Be Yourself" />
-    <meta property="og:url" content="/" />
-    <meta property="og:image" content="/assets/images/blog-cover.jpg" />
-    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Sanjula Mansingh" />
-    <meta name="twitter:description" content="Life Coaching · Be Yourself" />
-    <meta name="twitter:url" content="/" />
-    <meta name="twitter:image" content="/assets/images/blog-cover.jpg" />
-    <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="Sanjula Mansingh" />
-    <meta name="twitter:site" content="@" />
-    <meta name="twitter:creator" content="@" />
-    <meta property="og:image:width" content="2000" />
-    <meta property="og:image:height" content="666" />
+    .logo {
+      animation: fade-in-top 3s 9s ease-out forwards;
+      align-self: flex-end;
+      opacity: 0;
+      padding: .5rem;
+    }
 
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Website",
-    "publisher": {
-        "@type": "Organization",
-        "name": "Sanjula Mansingh",
-        "logo": "/assets/images/blog-icon.png"
-    },
-    "url": "/",
-    "image": {
-        "@type": "ImageObject",
-        "url": "/assets/images/blog-cover.jpg",
-        "width": 2000,
-        "height": 666
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "/"
-    },
-    "description": "Life Coaching · Be Yourself"
-}
-    </script>
+    @keyframes fade-in-bg {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+        filter: none;
+      }
+      100% {
+        filter: brightness(0.8);
+        opacity: 1;
+      }
+    }
 
-    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
-    <script type="text/javascript">
-    ghost.init({
-    	clientId: "ghost-frontend",
-    	clientSecret: "f84a07a72b17"
-    });
-    </script> -->
-
-    <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Sanjula Mansingh" href="/feed.xml" />
-
-
+    @keyframes fade-in-txt {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+    @keyframes fade-in-top {
+      0% {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+  </style>
 </head>
-<body class="home-template">
-
-    <div class="site-wrapper">
-        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-        <!-- < default -->
-<!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template -->
-
-<!-- The big featured header, it uses blog cover image as a BG if available -->
-<header class="site-header outer " style="background-image:  url(/assets/images/blog-cover.jpg) ">
-    <div class="inner">
-        <div class="site-header-content">
-            <h1 class="site-title">
-                
-                    <img class="site-logo" src="/assets/images/blog-icon.png" alt="Sanjula Mansingh"/>
-                
-            </h1>
-            <h2 class="site-description">Life Coaching · Be Yourself</h2>
-        </div>
-        <nav class="site-nav">
-    <div class="site-nav-left">
-        
-        
-            <ul class="nav" role="menu">
-    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
-    <li class="nav-home" role="menuitem"><a href="/coaching">Coaching</a></li>
-    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
-    <!--li class="nav-getting-started" role="menuitem"><a href="/tag/getting-started/">Getting Started</a></li-->
-</ul>
-
-        
+<body>
+  <div class="bg-fade-in"></div>
+  <div class="content">
+    <div class="invis"></div>
+    <div class="invis"></div>
+    <div class="invis"></div>
+    <div class="title">
+      <p class="p-fin-0">Something beautiful</p>
+      <p class="p-fin-1">is growing here</p>
     </div>
-    <div class="site-nav-right">
-        <div class="social-links">
-            
-                <a class="social-link social-link-fb" href="https://facebook.com/ghost" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
-</a>
-            
-            
-        </div>
-        
-            <a class="subscribe-button" href="#subscribe">Subscribe</a>
-        
-    </div>
-</nav>
-
-    </div>
-</header>
-
-<!-- The main content area -->
-<main id="site-main" class="site-main outer" role="main">
-    <div class="inner">
-
-        <div class="post-feed">
-            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
-            
-
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/welcome">
-                <div class="post-card-image" style="background-image: url(/assets/images/welcome.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/welcome">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Welcome to Ghost</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Hey! Welcome to Ghost, it’s great to have you :)
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/ghost.png" alt="Ghost" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ghost/">Ghost</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/the-editor">
-                <div class="post-card-image" style="background-image: url(/assets/images/writing.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/the-editor">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Using the Ghost editor</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Ghost uses a language called Markdown to format text. When you go to edit a post and see special characters and colours intertwined between the words, those are Markdown shortcuts which tell Ghost</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/ghost.png" alt="Ghost" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ghost/">Ghost</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      3 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/using-tags">
-                <div class="post-card-image" style="background-image: url(/assets/images/tags.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/using-tags">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Organising your content with tags</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Ghost has a single, powerful organisational taxonomy, called tags. It doesn't matter whether you want to call them categories, tags, boxes, or anything else. You can think of Ghost tags a lot like</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/ghost.png" alt="Ghost" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ghost/">Ghost</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      2 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/managing-users">
-                <div class="post-card-image" style="background-image: url(/assets/images/team.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/managing-users">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Managing Ghost users</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Ghost has a number of different user roles for your team Authors The base user level in Ghost is an author. Authors can write posts, edit their own posts, and publish their own</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/ghost.png" alt="Ghost" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ghost/">Ghost</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/private-sites">
-                <div class="post-card-image" style="background-image: url(/assets/images/locked.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/private-sites">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Making your site private</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Sometimes you might want to put your site behind closed doors If you've got a publication that you don't want the world to see yet because it's not ready to launch, you can</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/ghost.png" alt="Ghost" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ghost/">Ghost</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/advanced-markdown">
-                <div class="post-card-image" style="background-image: url(/assets/images/advanced.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/advanced-markdown">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Advanced Markdown tips</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>There are lots of powerful things you can do with the Ghost editor If you've gotten pretty comfortable with all the basics of writing in Ghost, then you may enjoy some more advanced</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/ghost.png" alt="Ghost" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ghost/">Ghost</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      2 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/themes">
-                <div class="post-card-image" style="background-image: url(/assets/images/design.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/themes">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Setting up your own Ghost theme</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Creating a totally custom design for your publication Ghost comes with a beautiful default theme called Casper, which is designed to be a clean, readable publication layout and can be easily adapted for</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/ghost.png" alt="Ghost" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ghost/">Ghost</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/the-businessman-and-fisherman">
-                <div class="post-card-image" style="background-image: url(/assets/images/water.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/the-businessman-and-fisherman">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Fables</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">The Businessman & The Fisherman</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>An American businessman took a vacation to a small coastal Mexican village on doctor’s orders. Unable to sleep after an urgent phone call from the office the first morning, he walked out to</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/hannah.jpg" alt="Hannah Wolfe" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/hannah/">Hannah Wolfe</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      2 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/a-full-and-comprehensive-style-test">
-                <div class="post-card-image" style="background-image: url(/assets/images/bear.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/a-full-and-comprehensive-style-test">
-                <header class="post-card-header">
-                    
-
-                    <h2 class="post-card-title">A Full and Comprehensive Style Test</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/john.jpg" alt="John O'Nolan" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/john/">John O'Nolan</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      5 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/i-have-a-dream">
-                <div class="post-card-image" style="background-image: url(/assets/images/sky.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/i-have-a-dream">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Speeches</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">I Have a Dream</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation.
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/martin.jpg" alt="Martin Luther King" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/martin/">Martin Luther King</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      8 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/the-purpose-of-education">
-                <div class="post-card-image" style="background-image: url(/assets/images/grapes.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/the-purpose-of-education">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Speeches</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">The Purpose of Education</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>As I engage in the so-called “bull sessions” around and about the school, I too often find that most college men have a misconception of the purpose of education. Most of the “brethren”</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/martin.jpg" alt="Martin Luther King" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/martin/">Martin Luther King</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      2 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/out-to-sea">
-                <div class="post-card-image" style="background-image: url(/assets/images/waves.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/out-to-sea">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Fiction</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Out to Sea</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>I had this story from one who had no business to tell it to me, or to any other. I may credit the seductive influence of an old vintage upon the narrator for</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/edgar.gif" alt="Edgar Rice Burroughs" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/edgar/">Edgar Rice Burroughs</a>
-                        </span>
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      8 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/looking-glass-house">
-                <div class="post-card-image" style="background-image: url(/assets/images/summit.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/looking-glass-house">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Fiction</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Looking-Glass house</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>One thing was certain, that the white kitten had had nothing to do with it:— it was the black kitten’s fault entirely. For the white kitten had been having its face washed by</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/lewis.jpeg" alt="Lewis Carroll" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/lewis/">Lewis Carroll</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      13 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/down-the-rabbit-hole">
-                <div class="post-card-image" style="background-image: url(/assets/images/piano.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/down-the-rabbit-hole">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Fiction</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Down The Rabbit Hole</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/lewis.jpeg" alt="Lewis Carroll" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/lewis/">Lewis Carroll</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      10 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/gettysburg-address">
-                <div class="post-card-image" style="background-image: url(/assets/images/bus.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/gettysburg-address">
-                <header class="post-card-header">
-                    
-
-                    <h2 class="post-card-title">Gettysburg Address</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Fourscore and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/abraham.jpg" alt="Abraham Lincoln" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/abraham/">Abraham Lincoln</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-
-        </div>
-
-    </div>
-</main>
-
-
-        <!-- Previous/next page links - displayed on every page -->
-        
-
-        <!-- The footer at the very bottom of the screen -->
-        <footer class="site-footer outer">
-            <div class="site-footer-content inner">
-                <section class="copyright"><a href="/">Sanjula Mansingh</a> &copy; 2019</section>
-                <!--section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
-                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
-                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section-->
-                <nav class="site-footer-nav">
-                    <a href="/">Latest Posts</a>
-                    <a href="https://facebook.com/ghost" target="_blank" rel="noopener">Facebook</a>
-                    
-                    <!--a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a-->
-                </nav>
-            </div>
-        </footer>
-
-    </div>
-
-    <!-- The big email subscribe modal content -->
-    
-        <div id="subscribe" class="subscribe-overlay">
-            <a class="subscribe-overlay-close" href="#"></a>
-            <div class="subscribe-overlay-content">
-                
-                    <img class="subscribe-overlay-logo" src="/assets/images/blog-icon.png" alt="Sanjula Mansingh" />
-                
-                <h1 class="subscribe-overlay-title">Subscribe to Sanjula Mansingh</h1>
-                <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
-                <form method="post" action="/subscribe/" class="">
-    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
-
-    <div class="form-group">
-        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
-    </div>
-    <button class="" type="submit" disabled><span>Subscribe</span></button>
-    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
-</form>
-
-            </div>
-        </div>
-    
-
-    <!-- highlight.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
-    <script>$(document).ready(function() {
-      $('pre code').each(function(i, block) {
-        hljs.highlightBlock(block);
-      });
-    });</script>
-
-    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
-
-
-    <!-- Paginator increased to "infinit" in _config.yml -->
-    <!-- if paginator.posts  -->
-    <!-- <script>
-        var maxPages = parseInt('1');
-    </script>
-    <script src="/assets/js/infinitescroll.js"></script> -->
-    <!-- /endif -->
-
-    
-
-
-    <!-- Add Google Analytics  -->
-    <!-- Google Analytics Tracking code -->
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', '', 'auto');
-  ga('send', 'pageview');
-
- </script>
-
-
-    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
-    
-
-    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
-    <!-- ghost_foot -->
-
+    <svg
+      class="logo"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:cc="http://creativecommons.org/ns#"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 300 100"
+      version="1.1"
+      width="200"
+      height="67" >
+      <g
+        id="g10543"
+        transform="matrix(1.7308709,0,0,1.7308709,-36.699806,-62.286307)">
+        <path
+          style="fill:#ffffff;stroke-width:0.26041666;fill-opacity:0.31963471"
+          d="m 44.734833,88.073302 c 0.589321,-0.54406 1.194758,-1.313406 1.345414,-1.709661 0.159081,-0.418417 0.27392,-2.945131 0.27392,-6.026901 v -7.306438 l 1.771411,0.148511 c 1.619909,0.135807 3.222539,-0.134071 5.119974,-0.862183 0.352636,-0.13532 0.400281,2.529623 0.400281,7.586472 0,3.385114 0.112381,6.035658 0.27392,6.460539 0.150656,0.396255 0.756093,1.165601 1.345414,1.709661 L 56.336661,89.0625 H 50 43.663339 Z"
+          id="path10545" />
+        <path
+          style="fill:#ffffff;stroke-width:0.15593576"
+          d="M 47.594226,78.710833 47.046902,78.449834 C 46.236987,78.063605 45.119589,76.969061 44.60576,76.058607 l -0.452343,-0.801508 -1.047449,-0.06151 c -0.576097,-0.03383 -1.286286,-0.181963 -1.578198,-0.32918 -0.740598,-0.373499 -0.872374,-0.345933 -1.54057,0.322263 -0.775325,0.775325 -1.626899,1.16853 -2.707181,1.250011 -1.969522,0.148552 -3.57243,-0.959469 -4.347745,-3.005405 -0.234341,-0.618392 -0.251865,-0.629151 -1.169518,-0.718119 -2.213748,-0.21462 -3.779696,-1.768059 -3.941219,-3.909672 -0.140744,-1.866094 1.018891,-3.640861 2.79572,-4.278715 l 0.837566,-0.300674 0.0973,-0.934156 c 0.109922,-1.055301 0.314387,-1.650121 0.763461,-2.221026 0.496821,-0.631604 0.398115,-0.774047 -0.587876,-0.848359 -2.786084,-0.209984 -4.587889,-2.920876 -3.706035,-5.575888 0.357618,-1.076687 1.473083,-2.191799 2.595581,-2.594759 l 0.837566,-0.300674 0.09377,-0.934156 c 0.126814,-1.263346 0.455216,-1.96688 1.302498,-2.790345 1.139898,-1.107854 2.58483,-1.413078 4.473288,-0.944927 0.372293,0.09229 0.430109,0.04455 0.602591,-0.497597 0.662745,-2.083142 2.530327,-3.484496 4.643782,-3.484496 0.83385,0 0.893466,-0.02913 1.769212,-0.864449 1.31708,-1.256281 2.056638,-1.552322 3.877954,-1.552322 1.189023,0 1.625286,0.06648 2.210494,0.336843 0.97421,0.450082 2.092835,1.505439 2.658982,2.508599 l 0.462111,0.818815 h 0.823156 c 1.572094,0 2.811343,0.690294 3.685869,2.053125 0.464393,0.723693 0.53736,0.774475 0.983177,0.684248 2.1285,-0.430781 3.391195,-0.178158 4.498265,0.899951 0.970985,0.945584 1.284557,1.678069 1.279979,2.989947 -0.0021,0.600352 -0.06164,1.311786 -0.13231,1.580962 -0.122994,0.468445 -0.10276,0.497602 0.472276,0.68056 1.452613,0.462175 2.616202,1.543424 3.222474,2.994438 0.189127,0.452643 0.423127,0.658194 1.129956,0.992576 2.761521,1.30641 3.704859,4.563678 2.064795,7.129568 -0.501113,0.783997 -1.495229,1.569996 -2.348706,1.857008 -0.90523,0.304416 -0.921862,0.383956 -0.273756,1.309157 2.200316,3.141057 0.279482,7.361231 -3.488155,7.663661 -1.260707,0.101197 -2.427462,-0.242989 -3.432153,-1.012462 -0.419947,-0.32163 -0.851944,-0.650448 -0.959995,-0.730707 -0.136015,-0.101032 -0.378664,0.01405 -0.788702,0.374071 -1.093106,0.95976 -2.12089,1.317659 -3.881129,1.351502 l -1.559358,0.02998 -0.441867,0.754545 c -0.243027,0.414999 -0.751768,1.072725 -1.130534,1.461612 l -0.688667,0.707067 c -1.880716,1.50494 -4.210091,0.946368 -4.989895,0.592822 z"
+          id="path10555" />
+      </g>
+      <g
+        aria-label="sanjulamansingh"
+        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1;font-family:C059;-inkscape-font-specification:C059;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+        id="text831">
+        <path
+          d="M 212.7832 10.201172 L 204.88867 10.671875 L 204.88867 12.505859 L 206.98047 12.505859 C 208.55914 12.548529 208.77148 12.804005 208.77148 14.638672 L 208.77148 36.398438 L 208.77148 38.404297 C 208.72878 39.044297 208.68632 39.300339 208.51562 39.513672 C 208.21696 39.897672 207.40694 40.068661 205.57227 40.111328 L 205.27344 40.111328 L 205.27344 41.646484 L 216.32422 41.646484 L 216.32422 40.111328 L 216.02539 40.111328 C 213.16673 40.025998 212.7832 39.813344 212.7832 38.277344 L 212.7832 36.398438 L 212.7832 10.201172 z M 172.1543 11.140625 C 170.78897 11.140625 169.67969 12.2499 169.67969 13.615234 C 169.67969 14.980567 170.79061 16.089844 172.11328 16.089844 C 173.52128 16.089844 174.62891 14.980567 174.62891 13.615234 C 174.62891 12.2499 173.51964 11.140625 172.1543 11.140625 z M 106.11523 21.125 C 102.36056 21.125 99.886719 23.55588 99.886719 27.310547 C 99.886719 28.974547 100.44024 30.382994 101.37891 31.236328 C 102.36024 32.132328 103.34234 32.558916 105.90234 33.15625 L 108.16406 33.667969 C 111.53472 34.478635 112.72852 35.332397 112.72852 37.039062 C 112.72852 39.044396 110.98053 40.453125 108.50586 40.453125 C 104.87919 40.453125 102.31892 38.147526 101.29492 33.880859 L 99.587891 33.880859 L 99.587891 41.945312 L 101.08203 41.945312 L 102.57422 40.197266 C 104.32356 41.605266 106.24392 42.287109 108.41992 42.287109 C 112.60125 42.287109 115.375 39.684797 115.375 35.716797 C 115.375 33.839463 114.7767 32.387584 113.58203 31.40625 C 112.55803 30.51025 111.70423 30.169901 109.10156 29.615234 L 106.96875 29.146484 C 104.62208 28.634484 104.62152 28.633698 103.85352 28.207031 C 102.91486 27.780364 102.36133 26.883978 102.36133 25.945312 C 102.36133 24.195978 103.98145 23.001953 106.32812 23.001953 C 107.94946 23.001953 109.27213 23.556984 110.4668 24.708984 C 111.40546 25.647651 111.87593 26.500224 112.55859 28.462891 L 114.05273 28.462891 L 114.05273 21.294922 L 112.55859 21.294922 L 111.32031 22.832031 C 109.78431 21.637364 108.24856 21.125 106.11523 21.125 z M 128.09375 21.125 C 123.27242 21.125 119.77539 23.385334 119.77539 26.5 C 119.77539 28.078667 120.75667 29.103516 122.25 29.103516 C 123.61533 29.103516 124.55273 28.207734 124.55273 26.927734 C 124.55273 26.373067 124.34073 25.775067 123.91406 25.177734 C 123.65806 24.879067 123.61523 24.793412 123.61523 24.580078 C 123.61523 23.726745 125.32114 22.958984 127.36914 22.958984 C 128.73447 22.958984 130.2275 23.385391 130.91016 24.025391 C 131.72083 24.708057 132.01953 25.732344 132.01953 27.652344 L 132.01953 29.316406 C 127.58219 30.084406 126.17464 30.425661 124.08398 31.236328 C 120.37198 32.601661 118.62305 34.564256 118.62305 37.294922 C 118.62305 40.366923 121.01126 42.287109 124.80859 42.287109 C 127.75259 42.287109 130.39775 41.092016 132.23242 38.916016 C 132.91509 41.092016 133.98294 41.945313 135.98828 41.945312 C 137.90828 41.945312 139.91406 40.708036 139.91406 39.470703 C 139.91406 39.172036 139.74233 38.958984 139.48633 38.958984 C 139.31567 38.958984 139.14437 39.000909 138.8457 39.128906 C 138.24837 39.384906 137.99367 39.427734 137.65234 39.427734 C 136.45767 39.427734 136.03125 38.660375 136.03125 36.484375 L 136.03125 27.908203 C 136.03125 25.220202 135.56155 23.856031 134.32422 22.832031 C 132.91622 21.680031 130.82442 21.125 128.09375 21.125 z M 155.76953 21.125 C 152.9962 21.125 150.90663 22.404703 149.0293 25.220703 L 149.0293 21.763672 L 141.64648 22.234375 L 141.64648 24.068359 L 143.18359 24.068359 C 144.80493 24.111029 145.01758 24.366505 145.01758 26.201172 L 145.01758 36.398438 L 145.01758 37.423828 L 145.01758 38.404297 C 144.97488 39.044297 144.93242 39.300339 144.76172 39.513672 C 144.46305 39.897672 143.65303 40.068661 141.81836 40.111328 L 141.64648 40.111328 L 141.64648 41.646484 L 152.44141 41.646484 L 152.44141 40.111328 L 152.27148 40.111328 C 149.41282 40.025998 149.0293 39.813344 149.0293 38.277344 L 149.0293 36.398438 L 149.0293 31.960938 C 149.0293 29.870271 149.32753 27.950083 149.79688 26.96875 C 150.69287 25.04875 152.61261 23.726563 154.44727 23.726562 C 155.55661 23.726562 156.83656 24.324703 157.47656 25.220703 C 158.11656 26.15937 158.41602 27.438328 158.41602 29.486328 L 158.41602 36.398438 L 158.41602 38.404297 C 158.37332 39.044297 158.3289 39.300339 158.1582 39.513672 C 157.85954 39.897672 157.00653 40.068661 155.17188 40.111328 L 155.00195 40.111328 L 155.00195 41.646484 L 165.79688 41.646484 L 165.79688 40.111328 L 165.625 40.111328 C 162.809 40.025998 162.42578 39.813344 162.42578 38.277344 L 162.42578 36.398438 L 162.42578 29.701172 C 162.42578 26.629171 162.2973 25.860822 161.5293 24.410156 C 160.46263 22.362156 158.32953 21.125 155.76953 21.125 z M 228.84375 21.125 C 224.02241 21.125 220.52539 23.385334 220.52539 26.5 C 220.52539 28.078667 221.50667 29.103516 223 29.103516 C 224.36534 29.103516 225.30273 28.207734 225.30273 26.927734 C 225.30273 26.373067 225.09073 25.775067 224.66406 25.177734 C 224.40806 24.879067 224.36523 24.793412 224.36523 24.580078 C 224.36523 23.726745 226.07114 22.958984 228.11914 22.958984 C 229.48448 22.958984 230.97749 23.385391 231.66016 24.025391 C 232.47082 24.708057 232.76953 25.732344 232.76953 27.652344 L 232.76953 29.316406 C 228.3322 30.084406 226.92465 30.425661 224.83398 31.236328 C 221.12198 32.601661 219.37305 34.564256 219.37305 37.294922 C 219.37305 40.366923 221.76126 42.287109 225.55859 42.287109 C 228.50259 42.287109 231.14776 41.092016 232.98242 38.916016 C 233.66509 41.092016 234.73295 41.945313 236.73828 41.945312 C 238.65828 41.945312 240.66406 40.708036 240.66406 39.470703 C 240.66406 39.172036 240.49233 38.958984 240.23633 38.958984 C 240.06566 38.958984 239.89436 39.000909 239.5957 39.128906 C 238.99836 39.384906 238.74367 39.427734 238.40234 39.427734 C 237.20767 39.427734 236.78125 38.660375 236.78125 36.484375 L 236.78125 27.908203 C 236.78125 25.220202 236.31155 23.856031 235.07422 22.832031 C 233.66622 21.680031 231.57441 21.125 228.84375 21.125 z M 174.16016 21.763672 L 165.83984 22.234375 L 165.83984 24.068359 L 168.31445 24.068359 C 169.93579 24.111029 170.15039 24.366505 170.15039 26.201172 L 170.15039 40.666016 C 170.15039 44.122016 169.93718 45.743136 169.33984 46.980469 C 168.91318 47.833802 167.93085 48.474609 166.99219 48.474609 C 166.39485 48.474609 165.92578 48.218588 165.92578 47.919922 C 165.92578 47.749255 165.96804 47.662995 166.13867 47.236328 C 166.35201 46.809661 166.4375 46.511558 166.4375 46.212891 C 166.4375 45.146224 165.41342 44.207031 164.21875 44.207031 C 162.85342 44.207031 161.83008 45.274244 161.83008 46.767578 C 161.83008 48.858244 163.7507 50.265625 166.60938 50.265625 C 168.99871 50.265625 171.17283 49.24152 172.41016 47.492188 C 173.73283 45.614854 174.16016 43.438522 174.16016 38.617188 L 174.16016 21.763672 z M 186.35742 21.763672 L 178.89062 22.234375 L 178.89062 24.068359 L 180.51172 24.068359 C 182.13305 24.111029 182.34766 24.366505 182.34766 26.201172 L 182.34766 35.417969 C 182.34766 37.593969 182.5182 38.575307 183.1582 39.556641 C 184.3102 41.305974 186.35797 42.287109 188.91797 42.287109 C 191.73397 42.287109 193.69689 41.134964 195.57422 38.404297 L 195.57422 41.945312 L 203.33984 41.646484 L 203.33984 39.8125 L 202.27148 39.8125 C 199.79681 39.72717 199.58398 39.4706 199.58398 36.697266 L 199.58398 21.763672 L 191.5625 22.234375 L 191.5625 24.068359 L 193.73828 24.068359 C 195.35962 24.111029 195.57422 24.366505 195.57422 26.201172 L 195.57422 31.449219 C 195.57422 33.881219 195.31773 35.331933 194.67773 36.697266 C 193.78173 38.617266 192.07503 39.683594 189.98438 39.683594 C 188.66171 39.683594 187.55272 39.214662 186.99805 38.361328 C 186.44338 37.550661 186.35742 37.124011 186.35742 34.777344 L 186.35742 21.763672 z M 132.01953 31.150391 L 132.01953 33.113281 C 132.01953 35.673281 131.89136 36.271525 131.16602 37.380859 C 130.09936 38.959525 128.18007 40.025391 126.30273 40.025391 C 124.34007 40.025391 122.93164 38.617266 122.93164 36.697266 C 122.93164 34.905266 123.82775 33.626469 125.70508 32.730469 C 127.02775 32.133136 128.69153 31.705058 132.01953 31.150391 z M 232.76953 31.150391 L 232.76953 33.113281 C 232.76953 35.673281 232.64135 36.271525 231.91602 37.380859 C 230.84935 38.959525 228.93006 40.025391 227.05273 40.025391 C 225.09006 40.025391 223.68164 38.617266 223.68164 36.697266 C 223.68164 34.905266 224.57775 33.626469 226.45508 32.730469 C 227.77775 32.133136 229.44153 31.705058 232.76953 31.150391 z M 275.2793 52.869141 L 267.38477 53.337891 L 267.38477 55.171875 L 269.43359 55.171875 C 271.05492 55.214545 271.26758 55.471974 271.26758 57.306641 L 271.26758 79.066406 L 271.26758 80.089844 L 271.26758 81.113281 C 271.22488 81.710615 271.18242 81.966354 271.01172 82.179688 C 270.71305 82.563688 269.90302 82.734678 268.06836 82.777344 L 267.89648 82.777344 L 267.89648 84.314453 L 278.69141 84.314453 L 278.69141 82.777344 L 278.52148 82.777344 C 275.66281 82.692014 275.2793 82.479359 275.2793 80.943359 L 275.2793 79.066406 L 275.2793 74.628906 C 275.2793 72.538239 275.57755 70.618052 276.04688 69.636719 C 276.98555 67.716719 278.8626 66.394531 280.69727 66.394531 C 281.8066 66.394531 283.08625 67.033386 283.68359 67.886719 C 284.36625 68.825386 284.66602 70.106599 284.66602 72.197266 L 284.66602 79.066406 L 284.66602 81.113281 C 284.62332 81.710615 284.5789 81.966355 284.4082 82.179688 C 284.10953 82.563688 283.25654 82.734678 281.42188 82.777344 L 281.25195 82.777344 L 281.25195 84.314453 L 292.04688 84.314453 L 292.04688 82.777344 L 291.875 82.777344 C 289.059 82.692014 288.67578 82.479359 288.67578 80.943359 L 288.67578 79.066406 L 288.67578 72.367188 C 288.67578 69.295187 288.5473 68.526839 287.7793 67.076172 C 286.71263 64.985506 284.57953 63.791016 282.01953 63.791016 C 279.24619 63.791016 277.1993 65.028052 275.2793 67.886719 L 275.2793 52.869141 z M 211.69531 53.806641 C 210.32997 53.806641 209.2207 54.915917 209.2207 56.28125 C 209.2207 57.646584 210.32967 58.755859 211.65234 58.755859 C 213.06034 58.755859 214.16992 57.646584 214.16992 56.28125 C 214.16992 54.915917 213.06064 53.806641 211.69531 53.806641 z M 264.55469 63.193359 C 263.18936 63.193359 262.42165 63.620109 260.45898 65.412109 C 258.66698 64.217443 257.3013 63.791016 255.16797 63.791016 C 250.09063 63.791016 246.76172 66.60638 246.76172 70.873047 C 246.76172 73.39038 248.12704 75.525131 250.3457 76.591797 C 247.48704 77.231797 246.29297 78.510755 246.29297 80.857422 C 246.29297 82.734756 247.147 83.844677 249.15234 84.527344 C 246.507 85.508677 245.22656 86.830745 245.22656 88.580078 C 245.22656 89.860078 246.07998 91.055917 247.44531 91.78125 C 249.10931 92.634584 251.15652 92.974609 254.22852 92.974609 C 261.35385 92.974609 264.89648 90.714376 264.89648 86.234375 C 264.89648 84.101042 263.91491 82.393906 262.37891 81.753906 C 261.22691 81.32724 259.86031 81.15625 256.95898 81.15625 L 252.60742 81.15625 C 250.26075 81.11358 250.13309 81.070154 249.62109 80.771484 C 249.32242 80.600817 249.10937 80.131442 249.10938 79.662109 C 249.10938 78.382108 250.26047 77.827521 253.11914 77.742188 C 257.1298 77.656858 257.77003 77.571641 259.2207 76.931641 C 261.7807 75.779641 263.18945 73.562094 263.18945 70.746094 C 263.18945 69.039427 262.80434 67.972454 261.65234 66.564453 C 262.37767 65.796453 262.76218 65.541016 263.10352 65.541016 C 263.31685 65.541016 263.44592 65.669338 263.53125 66.138672 C 263.70192 67.162672 264.38451 67.716797 265.45117 67.716797 C 266.56051 67.716797 267.37109 66.819969 267.37109 65.667969 C 267.37109 64.217303 266.21869 63.193359 264.55469 63.193359 z M 112.13086 63.791016 C 109.52819 63.791016 107.65228 65.028796 105.98828 67.716797 L 105.98828 64.431641 L 98.392578 64.900391 L 98.392578 66.734375 L 100.14258 66.734375 C 101.76392 66.777045 101.97656 67.034474 101.97656 68.869141 L 101.97656 79.066406 L 101.97656 80.730469 L 101.97656 81.070312 C 101.93386 81.710313 101.8914 81.966355 101.7207 82.179688 C 101.42203 82.563688 100.61201 82.734678 98.777344 82.777344 L 98.605469 82.777344 L 98.605469 84.314453 L 109.35938 84.314453 L 109.35938 82.777344 L 109.1875 82.777344 C 106.3715 82.692014 105.98828 82.479058 105.98828 80.900391 L 105.98828 79.066406 L 105.98828 73.007812 C 105.98828 69.21048 108.07822 66.394531 110.85156 66.394531 C 113.28356 66.394531 114.52148 68.143609 114.52148 71.599609 L 114.52148 79.066406 L 114.52148 81.113281 C 114.47878 81.667948 114.43603 81.966355 114.22266 82.179688 C 113.96666 82.563688 113.11397 82.734678 111.2793 82.777344 L 111.10742 82.777344 L 111.10742 84.314453 L 121.90234 84.314453 L 121.90234 82.777344 L 121.73242 82.777344 C 118.91642 82.692014 118.53125 82.479359 118.53125 80.943359 L 118.53125 79.066406 L 118.53125 73.390625 C 118.53125 69.123959 120.45084 66.394531 123.4375 66.394531 C 125.8695 66.394531 127.06445 68.228359 127.06445 72.068359 L 127.06445 79.066406 L 127.06445 81.070312 C 127.02175 81.667646 126.97899 81.966354 126.76562 82.179688 C 126.50962 82.563688 125.65694 82.734678 123.82227 82.777344 L 123.65234 82.777344 L 123.65234 84.314453 L 134.44727 84.314453 L 134.44727 82.777344 L 134.27539 82.777344 C 131.45939 82.692014 131.07617 82.479058 131.07617 80.900391 L 131.07617 79.066406 L 131.07617 71.214844 C 131.07617 68.569511 130.82028 67.673323 129.71094 66.222656 C 128.47361 64.643989 126.72378 63.791016 124.67578 63.791016 C 121.90244 63.791016 119.85419 65.114594 118.01953 68.058594 C 117.29419 65.498594 114.98952 63.791016 112.13086 63.791016 z M 146.67773 63.791016 C 141.85639 63.791016 138.35742 66.053302 138.35742 69.167969 C 138.35742 70.746636 139.3387 71.769531 140.83203 71.769531 C 142.19737 71.769531 143.13672 70.87375 143.13672 69.59375 C 143.13672 69.039083 142.92276 68.441083 142.49609 67.84375 C 142.24009 67.545083 142.19727 67.459427 142.19727 67.246094 C 142.19727 66.392761 143.90512 65.625 145.95312 65.625 C 147.31847 65.625 148.81147 66.053359 149.49414 66.693359 C 150.3048 67.376026 150.60352 68.398359 150.60352 70.318359 L 150.60352 71.982422 C 146.16619 72.750422 144.75864 73.091678 142.66797 73.902344 C 138.95597 75.267678 137.20508 77.230271 137.20508 79.960938 C 137.20508 83.032938 139.59525 84.953125 143.39258 84.953125 C 146.33658 84.953125 148.98175 83.759984 150.81641 81.583984 C 151.49908 83.759984 152.56498 84.613281 154.57031 84.613281 C 156.49031 84.613281 158.49609 83.376006 158.49609 82.138672 C 158.49609 81.840006 158.32631 81.625 158.07031 81.625 C 157.89964 81.625 157.72835 81.668878 157.42969 81.796875 C 156.83235 82.052875 156.57571 82.095703 156.23438 82.095703 C 155.0397 82.095703 154.61328 81.326391 154.61328 79.150391 L 154.61328 70.574219 C 154.61328 67.886219 154.14358 66.522047 152.90625 65.498047 C 151.49825 64.346047 149.40839 63.791016 146.67773 63.791016 z M 174.35352 63.791016 C 171.58019 63.791016 169.48866 65.070719 167.61133 67.886719 L 167.61133 64.431641 L 160.23047 64.900391 L 160.23047 66.734375 L 161.76562 66.734375 C 163.38697 66.777045 163.60156 67.034474 163.60156 68.869141 L 163.60156 79.066406 L 163.60156 80.089844 L 163.60156 81.070312 C 163.55886 81.710313 163.5164 81.966355 163.3457 82.179688 C 163.04703 82.563688 162.23506 82.734678 160.40039 82.777344 L 160.23047 82.777344 L 160.23047 84.314453 L 171.02539 84.314453 L 171.02539 82.777344 L 170.85352 82.777344 C 167.99486 82.692014 167.61133 82.479359 167.61133 80.943359 L 167.61133 79.066406 L 167.61133 74.628906 C 167.61133 72.538239 167.90957 70.618052 168.37891 69.636719 C 169.27491 67.716719 171.19659 66.394531 173.03125 66.394531 C 174.14059 66.394531 175.42055 66.990719 176.06055 67.886719 C 176.70055 68.825386 176.99805 70.106297 176.99805 72.154297 L 176.99805 79.066406 L 176.99805 81.070312 C 176.95535 81.710313 176.91289 81.966354 176.74219 82.179688 C 176.44353 82.563688 175.59052 82.734678 173.75586 82.777344 L 173.58594 82.777344 L 173.58594 84.314453 L 184.37891 84.314453 L 184.37891 82.777344 L 184.20898 82.777344 C 181.39298 82.692014 181.00977 82.479359 181.00977 80.943359 L 181.00977 79.066406 L 181.00977 72.367188 C 181.00977 69.295187 180.88128 68.526839 180.11328 67.076172 C 179.04661 65.028172 176.91352 63.791016 174.35352 63.791016 z M 193.86523 63.791016 C 190.11056 63.791016 187.63672 66.223849 187.63672 69.978516 C 187.63672 71.642516 188.19024 73.049011 189.12891 73.902344 C 190.11024 74.798344 191.09234 75.224933 193.65234 75.822266 L 195.91406 76.335938 C 199.28472 77.146604 200.47852 77.998411 200.47852 79.705078 C 200.47852 81.710412 198.73053 83.119141 196.25586 83.119141 C 192.62919 83.119141 190.06892 80.815495 189.04492 76.548828 L 187.33789 76.548828 L 187.33789 84.613281 L 188.83203 84.613281 L 190.32422 82.863281 C 192.07356 84.271281 193.99392 84.953125 196.16992 84.953125 C 200.35125 84.953125 203.125 82.350814 203.125 78.382812 C 203.125 76.50548 202.5267 75.055552 201.33203 74.074219 C 200.30803 73.178219 199.45423 72.835917 196.85156 72.28125 L 194.71875 71.8125 C 192.37208 71.3005 192.37152 71.299714 191.60352 70.873047 C 190.66486 70.44638 190.11133 69.551947 190.11133 68.613281 C 190.11133 66.863947 191.73145 65.667969 194.07812 65.667969 C 195.69946 65.667969 197.02213 66.223 198.2168 67.375 C 199.15546 68.313667 199.62593 69.166239 200.30859 71.128906 L 201.80273 71.128906 L 201.80273 63.960938 L 200.30859 63.960938 L 199.07031 65.498047 C 197.53431 64.30338 195.99856 63.791016 193.86523 63.791016 z M 233.60352 63.791016 C 230.83019 63.791016 228.73866 65.070719 226.86133 67.886719 L 226.86133 64.431641 L 219.48047 64.900391 L 219.48047 66.734375 L 221.01562 66.734375 C 222.63696 66.777045 222.85156 67.034474 222.85156 68.869141 L 222.85156 79.066406 L 222.85156 80.089844 L 222.85156 81.070312 C 222.80886 81.710313 222.7664 81.966355 222.5957 82.179688 C 222.29704 82.563688 221.48506 82.734678 219.65039 82.777344 L 219.48047 82.777344 L 219.48047 84.314453 L 230.27539 84.314453 L 230.27539 82.777344 L 230.10352 82.777344 C 227.24485 82.692014 226.86133 82.479359 226.86133 80.943359 L 226.86133 79.066406 L 226.86133 74.628906 C 226.86133 72.538239 227.15958 70.618052 227.62891 69.636719 C 228.52491 67.716719 230.44658 66.394531 232.28125 66.394531 C 233.39058 66.394531 234.67055 66.990719 235.31055 67.886719 C 235.95055 68.825386 236.24805 70.106297 236.24805 72.154297 L 236.24805 79.066406 L 236.24805 81.070312 C 236.20535 81.710313 236.16289 81.966354 235.99219 82.179688 C 235.69352 82.563688 234.84053 82.734678 233.00586 82.777344 L 232.83594 82.777344 L 232.83594 84.314453 L 243.62891 84.314453 L 243.62891 82.777344 L 243.45898 82.777344 C 240.64298 82.692014 240.25977 82.479359 240.25977 80.943359 L 240.25977 79.066406 L 240.25977 72.367188 C 240.25977 69.295187 240.13128 68.526839 239.36328 67.076172 C 238.29661 65.028172 236.16353 63.791016 233.60352 63.791016 z M 213.70117 64.431641 L 205.67969 64.900391 L 205.67969 66.734375 L 207.85547 66.734375 C 209.4768 66.777045 209.69141 67.034474 209.69141 68.869141 L 209.69141 79.066406 L 209.69141 81.070312 C 209.64871 81.710313 209.60429 81.966355 209.43359 82.179688 C 209.13493 82.563688 208.3249 82.734678 206.49023 82.777344 L 206.19141 82.777344 L 206.19141 84.314453 L 217.24219 84.314453 L 217.24219 82.777344 L 216.94336 82.777344 C 214.08469 82.692014 213.70117 82.479359 213.70117 80.943359 L 213.70117 79.066406 L 213.70117 64.431641 z M 255.125 65.625 C 257.77033 65.625 259.26367 67.461061 259.26367 70.789062 C 259.26367 74.117063 257.64308 76.121094 254.95508 76.121094 C 252.30975 76.121094 250.64453 74.116016 250.64453 70.916016 C 250.64453 67.545349 252.26633 65.625 255.125 65.625 z M 150.60352 73.818359 L 150.60352 75.78125 C 150.60352 78.34125 150.47533 78.937541 149.75 80.046875 C 148.68333 81.625541 146.76405 82.693359 144.88672 82.693359 C 142.92405 82.693359 141.51562 81.285234 141.51562 79.365234 C 141.51562 77.573234 142.41173 76.292484 144.28906 75.396484 C 145.61173 74.79915 147.27552 74.373026 150.60352 73.818359 z M 251.58398 84.826172 L 254.74023 84.826172 C 258.28156 84.826172 258.53938 84.824826 259.13672 84.910156 C 260.88605 85.080822 261.9082 86.019433 261.9082 87.384766 C 261.9082 89.816766 259.13639 91.226562 254.40039 91.226562 C 250.77372 91.226562 248.76758 90.158281 248.76758 88.238281 C 248.76758 86.830281 249.53598 85.892839 251.58398 84.826172 z "
+          id="path918" />
+      </g>
+    </svg>
+  </div>
 </body>
 </html>
