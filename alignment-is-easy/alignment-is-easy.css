@@ -1,0 +1,239 @@
+.font-allura {
+  font-family: 'Allura', cursive;
+  font-weight: 300;
+}
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+.font-im-fell-double-pica {
+  font-family: 'IM Fell Double Pica', serif;
+}
+
+body {
+  margin: 0;
+  max-width: 100%;
+  padding-bottom: 10rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+section {
+  width: 100%;
+  max-width: 900px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+
+.header {
+  justify-content: center;
+}
+.header__background {
+  position: absolute;
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+  flex-grow: 1;
+  background-image: url(assets/trees.jpg);
+  background-size: cover;
+  filter: opacity(0.7);
+  z-index: -1;
+}
+.header__text-box {
+  padding: 0.5rem 3rem;
+  background-color: rgba(255,255,255,.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__title {
+  margin: 0;
+  color: #299237;
+  font-size: 3rem;
+  text-align: center;
+}
+.header__subtitle {
+  color: rgb(5, 61, 13);
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.header__description {
+  color: rgb(5, 61, 13);
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.header__date {
+  color: rgb(41, 146, 55);
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.quote {
+  color: rgb(99, 140, 110);
+  font-style: italic;
+  padding: 0rem 8rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-family: 'IM Fell Double Pica', serif;
+  position: relative
+}
+.quotation-mark {
+  opacity: .4;
+  position: absolute;
+  left: 5rem;
+  top: .5rem;
+}
+.introduction {
+  padding: 3rem 0rem;
+}
+.introduction p {
+  color: rgb(33, 123, 45);
+  line-height: 1.3rem;
+}
+.introduction__title {
+  color: rgb(84, 84, 84);
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+}
+.introduction__image {
+  float: left;
+  margin: 1rem;
+  width: 18rem;
+  opacity: 0.8;
+}
+.introduction__text {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 4rem;
+  font-size: 0.8rem;
+  float: none;
+}
+
+.schedule {
+  width: 40rem;
+  max-width: 90%;
+  font-family: 'Open Sans', sans-serif;
+}
+.schedule h3 {
+  text-align: center;
+  color: rgb(41, 146, 55);
+  margin-bottom: 2rem;
+}
+.schedule__columns {
+  display: flex;
+  flex-direction: row;
+}
+.schedule__column {
+  width: 50%;
+}
+.schedule-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.6rem 0.4rem;
+  background-color: rgba(245, 255, 214, .5);
+  padding: 0.5rem 1rem;
+  color: rgb(33, 123, 45);
+}
+.schedule-block__title {
+  text-transform: uppercase;
+  margin-block-start: 0.8rem;
+  margin-block-end: 0.2rem;
+  text-align: center;
+}
+.schedule-block__content {
+  text-align: center;
+  margin-block-end: 0.2rem;
+}
+
+.schedule-days {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  color: white;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+.schedule-days__day {
+  background-color: rgb(0, 128, 55);
+  width: calc(50% - 0.4rem);
+  text-align: center;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.testimonials {
+  font-family: 'Open Sans', sans-serif;
+}
+.testimonials__title {
+  color: #299237;
+}
+
+.registration {
+  margin-top: 6rem;
+  font-family: 'Open Sans', sans-serif;
+}
+.registration h5 {
+  margin-top: .3rem;
+  margin-bottom: .3rem;
+}
+.registration__title {
+  color: #299237;
+  margin-bottom: 2rem;
+}
+.registration__cost {
+  background-color: rgba(167, 196, 135, 0.3);
+  padding: 0.2rem 2rem;
+  font-weight: 700;
+}
+.registration__cost-subtitle {
+  color: rgb(86, 155, 58);
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+}
+.registration-offers {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.registration-offer {
+  width: 40%;
+  min-width: 12rem;
+}
+.registration-offer__title {
+  background-color: rgb(86, 155, 58);
+  color: white;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+.registration-offer__entry {
+  color: rgb(33, 123, 45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin-top: .3rem;
+  margin-bottom: .3rem;
+}
+.registration-offer__entry-title {
+  text-align: center;
+  font-weight: 700;
+}
+.registration-offer__entry-description {
+  text-align: center;
+}
